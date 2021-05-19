@@ -4,7 +4,7 @@ var fs = require("fs");
 const moment = require("moment");
 
 module.exports = () => {
-  //   moveFile();
+  //moveFile();
   const job = schedule.scheduleJob(process.env.CRON, moveFile);
 };
 
@@ -28,6 +28,6 @@ getName = () => {
   return getDate();
 };
 
-getDate = (format = "YYYY-MM-DD") => {
+getDate = (format = "YYYY-MM-DD-ss") => {
   return moment().format(format);
 };
